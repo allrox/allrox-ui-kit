@@ -19,3 +19,14 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+h1 { @apply text-6xl mb-4 font-medium; }
+h2 { @apply text-4xl mb-4 font-medium; }
+h3 { @apply text-3xl mb-2 font-medium; }
+h4 { @apply text-2xl mb-2 font-medium; }
+h5 { @apply text-xl mb-2 font-medium; }
+h6 { @apply text-lg mb-2 font-medium; }
+
+p { @apply text-base mb-4; }
+.bold { font-weight: bold; }
+.italic { font-style: italic; }
