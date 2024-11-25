@@ -1,7 +1,7 @@
-export default function Section({ children, bg }) {
+export default function Section({ children, bg, id }) {
     return (
-        <div className={`p-5 ${bg}`}>
-            <div className="max-w-screen-xl mx-auto py-12">
+        <div id={id} className={`p-5 ${bg}`}>
+            <div className="max-w-screen-xl mx-auto py-14">
                 {children}
             </div>
         </div>
