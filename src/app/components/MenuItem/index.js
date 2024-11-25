@@ -1,8 +1,8 @@
-export default function MenuItem({ label, link, state }) {
+export default function MenuItem({ label, link, target, state }) {
 
     return (
         <li className={state}>
-            <a href={link} target="_blank">
+            <a href={link} target={target} >
                 {label}
             </a>
         </li>

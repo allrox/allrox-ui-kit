@@ -1,16 +1,54 @@
+import { useState } from "react"
+import React from "react";
 import Image from "next/image"
+import Link from "next/link";
+import { RxHamburgerMenu } from "react-icons/rx";
+import Button from "../ui/Button";
+import { FaWhatsapp } from "react-icons/fa";
 
-export default function Nav({ children, logo, alt, width, height, cta }) {
+export default function Nav({ children, logo, alt, width, height, cta, ctalink, brandtext, bg }) {
+
+    const [menuOpen, setMenuOpen] = useState(false);
+    const handleMenuClose = () => setMenuOpen(false);
+
+    const clonedChildren = React.Children.map(children, (child) =>
+        React.cloneElement(child, {
+            onClick: () => {
+                handleMenuClose();
+                if (child.props.onClick) {
+                    child.props.onClick();
+                }
+            },
+        })
+    );
+
     return (
-        <div className="flex flex-col gap-10  md:flex-row items-center md:justify-between">
-            <Image src={logo} alt={alt} width={width} height={height} />
-            <ul className="flex flex-col md:flex-row gap-8 items-center">
-                {children}
-            </ul>
-            {cta && <div>
-                <button>{cta}</button>
-            </div>}
-        </div>
+        <div className={`flex flex-col gap-4 w-full md:flex-row items-center md:justify-between ${bg}`}>
+            <div className="flex items-center justify-between w-full md:w-auto">
+                <Image src={logo} alt={alt} width={width} height={height} />
+                <div className="px-8 mt-1 ext-base font-bold text-[#FFCD46]">
+                    {brandtext}
+                </div>
 
+                <button className="block md:hidden p-2 text-2xl" onClick={() => setMenuOpen(!menuOpen)}>
+                    <RxHamburgerMenu />
+                </button>
+            </div>
+
+            <ul className={`${menuOpen ? "flex" : "hidden"} flex-col md:flex md:flex-row gap-8 items-center w-full md:w-auto grow justify-end text-base`}>
+
+                {children}
+
+                {cta && (
+                    <div className="mt-4 md:mt-0">
+
+                        <Button cta="Fale pelo WhatsApp" link="#">
+                            <FaWhatsapp />
+                        </Button>
+                    </div>
+                )}
+
+            </ul>
+        </div>
     )
 }
