@@ -58,22 +58,22 @@ export default function Home() {
         <h3>Here is a subtitle</h3>
         <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.</p>
 
-        <Grid cols="md:grid-cols-4">
+        <Grid cols="sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           <Card imgurl="/mockup.jpg" alt="Imagem de exemplo" width={640} height={800} title="Produto 1">
             <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica.</p>
-            <Button cta="Saiba mais" link="#" />
+            <Button props="w-full" cta="Saiba mais" link="#" />
           </Card>
           <Card imgurl="/mockup.jpg" alt="Imagem de exemplo" width={640} height={800} title="Produto 1">
             <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica.</p>
-            <Button cta="Saiba mais" link="#" />
+            <Button props="w-full" cta="Saiba mais" link="#" />
           </Card>
           <Card imgurl="/mockup.jpg" alt="Imagem de exemplo" width={640} height={800} title="Produto 1">
             <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica.</p>
-            <Button cta="Saiba mais" link="#" />
+            <Button props="w-full" cta="Saiba mais" link="#" />
           </Card>
           <Card imgurl="/mockup.jpg" alt="Imagem de exemplo" width={640} height={800} title="Produto 1">
             <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica.</p>
-            <Button cta="Saiba mais" link="#" />
+            <Button props="w-full" cta="Saiba mais" link="#" />
           </Card>
         </Grid>
 
