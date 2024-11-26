@@ -35,14 +35,14 @@ export default function Nav({ children, logo, alt, width, height, cta, ctalink, 
                 </button>
             </div>
 
-            <ul className={`${menuOpen ? "flex" : "hidden"} flex-col md:flex md:flex-row gap-8 items-center w-full md:w-auto grow justify-end text-base`}>
+            <ul className={`${menuOpen ? "flex" : "hidden"} flex-col md:flex md:flex-row gap-4 md:gap-8 sm:items-start  md:items-center w-full md:w-auto grow justify-end text-base`}>
 
                 {children}
 
                 {cta && (
-                    <div className="mt-4 md:mt-0">
+                    <div className="mt-2 md:mt-0">
 
-                        <Button cta="Fale pelo WhatsApp" link="#">
+                        <Button cta={cta} link={ctalink}>
                             <FaWhatsapp />
                         </Button>
                     </div>

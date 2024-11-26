@@ -8,7 +8,7 @@ body {
   @apply bg-primary-600;
 }
 
-h1 { @apply text-6xl mb-4 font-medium; }
+h1 { @apply text-5xl mb-4 font-medium; }
 h2 { @apply text-4xl mb-4 font-medium; }
 h3 { @apply text-3xl mb-4 font-medium; }
 h4 { @apply text-2xl mb-2 font-medium; }
