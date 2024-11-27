@@ -26,7 +26,7 @@ export default function Home() {
           <div className="flex flex-col justify-center content-center my-4" >
             <h1 className="mb-2"><span className="font-thin">AllRox</span><br /><span className="font-bold xl:text-8xl leading-none">The UI Kit Project</span></h1>
             <h3 className="italic font-thin">A sketch-to-code journey</h3>
-            <p className="mb-8">Here you will find the result of my learning process and (why not?) some mistakes.</p>
+            <p className="mb-8">Here you will find the result of my learning process and - why not? - some mistakes.</p>
             <Button cta="Okay, show me!" link="#imageandtext" />
           </div>
           <Image className="hidden md:block md:max-w-[40%] lg:max-w-[50%]" src="/model-desktop.webp" width={857} height={863} alt="Imagem ilustrativa" />
