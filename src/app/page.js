@@ -24,51 +24,51 @@ export default function Home() {
 
         <div className="flex flex-col md:flex-row gap-8 md:pt-10 w-full">
           <div className="flex flex-col justify-center content-center my-4" >
-            <h1 className="mb-2"><span className="font-thin">AllRox</span><br /><span className="font-bold xl:text-8xl leading-tight">The UI Kit Project</span></h1>
-            <h2 className="italic font-thin">A sketch-to-code journey</h2>
-            <p className="mb-8">Here you will ll find the result of my learning process, and why not some mistakes too?</p>
-            <Button cta="Okay, show me!" link="#textoimagem" props="w-full md:w-fit"/>
+            <h1 className="mb-2"><span className="font-thin">AllRox</span><br /><span className="font-bold xl:text-8xl leading-none">The UI Kit Project</span></h1>
+            <h3 className="italic font-thin">A sketch-to-code journey</h3>
+            <p className="mb-8">Here you will find the result of my learning process and (why not?) some mistakes.</p>
+            <Button cta="Okay, show me!" link="#imageandtext" />
           </div>
-            <Image className="hidden md:block md:max-w-[40%] lg:max-w-[50%]" src="/model-desktop.webp" width={857} height={863} alt="Imagem ilustrativa" />
-            <Image className="sm:block md:hidden " src="/model.webp" width={750} height={750} alt="Imagem ilustrativa" />
+          <Image className="hidden md:block md:max-w-[40%] lg:max-w-[50%]" src="/model-desktop.webp" width={857} height={863} alt="Imagem ilustrativa" />
+          <Image className="sm:block md:hidden " src="/model.webp" width={750} height={750} alt="Imagem ilustrativa" />
         </div>
-        
+
       </Hero>
 
-      <Section bg="bg-primary-700" id="imageandtext">
-        <h2 className="text-center">Text block + image sample section</h2>
+      <Section props="bg-primary-700" id="imageandtext">
         <TextImage image="/mockup-1x1.jpg" width={640} height={640} alt="Imagem ilustrativa">
-          <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.</p>
-          <p><span className="bold">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos.</span> Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.</p>
-          <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.</p>
+          <h2>Text block + image sample section</h2>
+          <p>LorLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
         </TextImage>
       </Section>
 
       <Section id="columns" >
         <h2 className="text-center">Text columns sample section</h2>
         <Grid cols="md:grid-cols-3">
-          <div>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.</div>
-          <div>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.</div>
-          <div>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.</div>
+          <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+          <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+          <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
         </Grid>
       </Section>
 
-      <Section bg="bg-primary-700" id="cards">
-        <h2>This is a <span className="italic">grid section</span></h2>
-        <h3>Here is a subtitle</h3>
-        <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.</p>
+      <Section props="bg-primary-700" id="cards">
+        <h2 className="text-center">This is a <span className="italic">grid section</span></h2>
+        <h3 className="text-center">Here is a subtitle</h3>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
 
-        <Grid cols="sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          <Card imgurl="/mockup-1x1.jpg" alt="Imagem de exemplo" width={640} height={800} title="Produto 1">
+        <Grid props="sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          <Card imgurl="/mockup-1x1.jpg" alt="Imagem de exemplo" width={640} height={800} title="Card Title">
             <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica.</p>
           </Card>
-          <Card imgurl="/mockup-1x1.jpg" alt="Imagem de exemplo" width={640} height={800} title="Produto 1">
+          <Card imgurl="/mockup-1x1.jpg" alt="Imagem de exemplo" width={640} height={800} title="Card Title">
             <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica.</p>
           </Card>
-          <Card imgurl="/mockup-1x1.jpg" alt="Imagem de exemplo" width={640} height={800} title="Produto 1">
+          <Card imgurl="/mockup-1x1.jpg" alt="Imagem de exemplo" width={640} height={800} title="Card Title">
             <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica.</p>
           </Card>
-          <Card imgurl="/mockup-1x1.jpg" alt="Imagem de exemplo" width={640} height={800} title="Produto 1">
+          <Card imgurl="/mockup-1x1.jpg" alt="Imagem de exemplo" width={640} height={800} title="Card Title">
             <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica.</p>
           </Card>
         </Grid>
@@ -76,9 +76,19 @@ export default function Home() {
       </Section>
 
       <Section>
-        <div className="flex flex-col md:flex-row items-center justify-around gap-10">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-10">
           <div>
-            <Image src="/allrox-logo.svg" alt="Logo AllRox" width={100} height={50} className="mb-8" />
+            <Image src="/allrox-logo.svg" alt="Logo AllRox" width={180} height={80} className="mb-4" />
+            <p>The UI Kit Project</p>
+          </div>
+          <div>
+            <h4 className="text-lg font-bold">Título</h4>
+            <ul>
+              <li>Item de menu</li>
+              <li>Item de menu</li>
+              <li>Item de menu</li>
+              <li>Item de menu</li>
+            </ul>
           </div>
           <div>
             <h4 className="text-lg font-bold">Título</h4>
