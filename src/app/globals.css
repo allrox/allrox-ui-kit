@@ -1,20 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #fff;
   @apply bg-primary-600;
 }
 
-h1 { @apply text-5xl font-medium; }
-h2 { @apply text-4xl font-medium; }
-h3 { @apply text-3xl font-medium; }
-h4 { @apply text-2xl font-medium; }
-h5 { @apply text-xl font-medium; }
-h6 { @apply text-lg font-medium; }
+h1 { @apply my-4 text-5xl; font-weight: 700; }
+h2 { @apply my-4 text-4xl; font-weight: 500;}
+h3 { @apply my-4 text-3xl; font-weight: 400;}
+h4 { @apply my-2 text-2xl; font-weight: 400;}
+h5 { @apply my-2 text-xl; font-weight: 300;}
+h6 { @apply my-2 text-lg; font-weight: 300;}
 
-p { @apply text-base my-2; }
+p { 
+  @apply text-base mt-6; 
+  font-weight: 200; 
+  line-height: 160%; 
+}
+
 .bold { font-weight: bold; }
 .italic { font-style: italic; }
+
+.property {
+  font-size: 12px;
+  font-weight: 600;
+  color: #602ED3;
+  background-color: #fff;
+  border: solid 1px #fff;
+  border-radius: 4px;
+  padding: 0px 2px
+}
