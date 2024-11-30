@@ -70,7 +70,7 @@ export default function Home() {
 
       <Section id="columns" >
         <h2 className="text-center">Text columns sample section</h2>
-        <p className="text-center">This section shows columns built with {`<Grid />`} component and Lorem Ipsum&apos;s sample text. By default, this component starts with a single column and you need to adjust columns using <span className="property">props</span> property and Tailwind <span className="property">grid-cols</span>.</p>
+        <p className="text-center">This section shows columns built with {`<Grid />`} component and Lorem Ipsum&apos;s sample text. By default, this component starts with a single column and you need to adjust columns using <span className="property">props</span> property and Tailwind <span className="property">grid-cols</span>. Note that grid behavior is to adjust itself and become lines on small devices.</p>
         <Spacing bottom={sm} />
         <Grid props="md:grid-cols-3 border border-2 border-primary-500 border-dashed px-8 pb-8">
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
