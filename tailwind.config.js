@@ -49,6 +49,13 @@ module.exports = {
         '5xl': ['48px', { lineHeight: '110%' }],
         '6xl': ['60px', { lineHeight: '110%' }],
         '7xl': ['72px', { lineHeight: '110%' }]
+      },
+      fontWeight:{
+        thin: 100,
+        regular: 300,
+        medium: 400,
+        bold: 600,
+        black: 900
       }
     },
   },
