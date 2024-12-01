@@ -15,6 +15,8 @@ import { FaInstagram } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import Spacing from "./components/ui/Spacing";
 import PropertyTag from "./components/PropertyTag";
+import Pricing from "./components/Pricing";
+import Divider from "./components/ui/Divider";
 
 export default function Home() {
 
@@ -70,7 +72,7 @@ export default function Home() {
 
       <Section id="columns" >
         <h2 className="text-center">Text columns sample section</h2>
-        <p className="text-center">This section shows columns built with {`<Grid />`} component and Lorem Ipsum&apos;s sample text. By default, this component starts with a single column and you need to adjust columns using <span className="property">props</span> property and Tailwind <span className="property">grid-cols</span>. Note that grid behavior is to adjust itself turning into lines on mobile devices.</p>
+        <p className="text-center">This section shows columns built with {`<Grid />`} component and Lorem Ipsum&apos;s sample text. By default, this component starts with a single column and you need to adjust columns using <span className="property">props</span> property and Tailwind&apos;s <span className="property">grid-cols</span>. Note that grid behavior is to adjust itself turning into lines on mobile devices.</p>
         <Spacing bottom={sm} />
         <Grid props="md:grid-cols-3 border border-2 border-primary-500 border-dashed px-8 pb-8">
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
@@ -82,28 +84,62 @@ export default function Home() {
       </Section>
 
       <Section props="bg-primary-800" id="cards">
-        <h2 className="text-center">This is a <span className="italic">grid section</span></h2>
-        <h3 className="text-center">Here is a subtitle</h3>
+        <h2 className="text-center">This is a demo of <span className="italic">grid section</span> and {`<Card/>`} component.</h2>
         <Spacing bottom={sm} />
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <p>Mixing {`<Grid />`} and {`<Card />`} you can build sections to showcase your products with a featured image icon buttons, description, old, current prices and an action button. To build your cards, you need to provide properties below:</p>
+        <div className="flex flex-col md:flex-row gap-16 my-10">
+          <div className="max-w-[400px]">
+            <Card imgurl="/mockup-1x1.jpg" alt="Imagem de exemplo" width={640} height={800} title="I&apos;m a sample card" share="#" settings="#" bookmark="#">
+              <div className="text-sm my-4">Here is a short description of your sample card subject.</div>
+              <Pricing oldprice="de R$199 por" price="99,90" method="no PIX" />
+              <Button cta="Ver mais" link="#" props="w-full bg-secondary-400 border-none text-primary-950" />
+            </Card>
+          </div>
+          <div>
+            <PropertyTag tag="imgurl" text="set the url to your card's featured image" />
+            <PropertyTag tag="alt" text="set the alternative text to your featured image. It&apos;s a best development practice." />
+            <PropertyTag tag="width" text="set image width. Required." />
+            <PropertyTag tag="height" text="set image height. Required." />
+            <PropertyTag tag="title" text="set card title." />
+            <PropertyTag tag="share" text="set share button link." />
+            <PropertyTag tag="settings" text="set settings button link." />
+            <PropertyTag tag="bookmark" text="set bookmark button link." />
+            <p>Inside card component, you can nest components like Pricing and Button, each one also owns specific properties as you will see next.</p>
+            <h4 className="mt-6">{`<Pricing />`}</h4>
+            <PropertyTag tag="oldprice" text="set oldprice text." />
+            <PropertyTag tag="price" text="set price text." />
+            <PropertyTag tag="method" text="set payment method text." />
+            <h4 className="mt-6">{`<Button />`}</h4>
+            <PropertyTag tag="cta" text="Your call to action text." />
+            <PropertyTag tag="link" text="Your button URL." />
+            <PropertyTag tag="props" text="Any className valid property." />
+          </div>
+        </div>
+
+        <Divider />
 
         <Grid props="sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          <Card imgurl="/mockup-1x1.jpg" alt="Imagem de exemplo" width={640} height={800} title="Card Title">
-            <p className="text-sm my-4">LorLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+          <Card imgurl="/mockup-1x1.jpg" alt="Imagem de exemplo" width={640} height={800} title="Card Title" share="#" settings="#" bookmark="#">
+            <div className="text-sm my-4">LorLorem Ipsum is simply dummy text of the printing and typesetting industry..</div>
+            <Pricing oldprice="de R$199 por" price="99,90" method="no PIX" />
             <Button cta="Ver mais" link="#" props="w-full bg-secondary-400 border-none text-primary-950" />
           </Card>
-          <Card imgurl="/mockup-1x1.jpg" alt="Imagem de exemplo" width={640} height={800} title="Card Title">
-            <p className="text-sm my-4">LorLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+          <Card imgurl="/mockup-1x1.jpg" alt="Imagem de exemplo" width={640} height={800} title="Card Title" share="#" settings="#" bookmark="#">
+            <div className="text-sm my-4">LorLorem Ipsum is simply dummy text of the printing and typesetting industry..</div>
+            <Pricing oldprice="de R$199 por" price="99,90" method="no PIX" />
             <Button cta="Ver mais" link="#" props="w-full bg-secondary-400 border-none text-primary-950" />
           </Card>
-          <Card imgurl="/mockup-1x1.jpg" alt="Imagem de exemplo" width={640} height={800} title="Card Title">
-            <p className="text-sm my-4">LorLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+          <Card imgurl="/mockup-1x1.jpg" alt="Imagem de exemplo" width={640} height={800} title="Card Title" share="#" settings="#" bookmark="#">
+            <div className="text-sm my-4">LorLorem Ipsum is simply dummy text of the printing and typesetting industry..</div>
+            <Pricing price="99,90" method="no PIX" />
             <Button cta="Ver mais" link="#" props="w-full bg-secondary-400 border-none text-primary-950" />
           </Card>
-          <Card imgurl="/mockup-1x1.jpg" alt="Imagem de exemplo" width={640} height={800} title="Card Title">
-            <p className="text-sm my-4">LorLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+          <Card imgurl="/mockup-1x1.jpg" alt="Imagem de exemplo" width={640} height={800} title="Card Title" share="#" settings="#" bookmark="#">
+            <div className="text-sm my-4">LorLorem Ipsum is simply dummy text of the printing and typesetting industry..</div>
+            <Pricing oldprice="de R$199 por" price="99,90" method="no PIX" />
             <Button cta="Ver mais" link="#" props="w-full bg-secondary-400 border-none text-primary-950" />
           </Card>
+
         </Grid>
 
       </Section>
