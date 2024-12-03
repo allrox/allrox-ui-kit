@@ -37,14 +37,14 @@ export default function Home() {
           </Nav>
         </MenuBar>
 
-        <div className="flex flex-col md:flex-row gap-2 md:gap-8 md:pt-8 w-full">
+        <div className="flex flex-col justify-end lg:flex-row gap-2 md:gap-8 md:pt-8 w-full">
           <div className="flex flex-col justify-center content-center" >
             <h1 className="mb-2 mt-2 sm:mt-0"><span className="font-thin lg:text-8xl">AllRox</span><br /><span className="md:text-7xl xl:text-8xl leading-none tracking-tighter">The UI Kit Project</span></h1>
             <h2 className="italic font-thin">A sketch-to-code journey</h2>
             <p className="mt-0 md:mb-8">Here you&apos;ll find some of my learning process results and - why not? - some mistakes.</p>
             <Button cta="Okay, show me!" link="#imageandtext" props="hidden md:block w-full sm:w-fit" arialabel="Começar a navegação" />
           </div>
-          <Image className="lg:max-w-[40%] mx-auto order-last md:order-first" src="/allrox.webp" width={650} height={650} loading="eager" alt="Imagem ilustrativa" />
+          <img className="lg:max-h-full lg:max-w-[600] mx-auto order-last lg:order-first" src="/allrox.webp" alt="Imagem ilustrativa" />
         </div>
 
       </Hero>
