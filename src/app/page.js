@@ -90,11 +90,13 @@ export default function Home() {
         <p>Mixing {`<Grid />`} and {`<Card />`} you can build sections to showcase your products with a featured image icon buttons, description, old, current prices and an action button. To build your cards, you need to provide properties below:</p>
         <div className="flex flex-col md:flex-row gap-16 my-10">
           <div className="max-w-[400px]">
-            <Card imgurl="/mockup-1x1.jpg" alt="Imagem de exemplo" width={640} height={800} title="I&apos;m a sample card" share="#" settings="#" bookmark="#">
-              <div className="text-sm my-4">Here is a short description of your sample card subject.</div>
-              <Pricing oldprice="de R$199 por" price="99,90" method="no PIX" />
-              <Button cta="Ver mais" link="#" props="w-full bg-secondary-400 border-none text-primary-950" />
-            </Card>
+            <Card imgurl="/mockup-1x1.jpg" alt="Imagem de exemplo" width={640} height={800}
+              title="I&apos;m a sample card" share="#" settings="#" bookmark="#"
+              desc="Here is your item&apos;s short description."
+              buttonUrl="https://globo.com"
+              oldprice="de R$199 por"
+              price="R$99,00"
+              method="PIX" />
           </div>
           <div>
             <PropertyTag tag="imgurl" text="set the url to your card's featured image" />
@@ -120,26 +122,41 @@ export default function Home() {
         <Divider />
 
         <Grid props="sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          <Card imgurl="/mockup-1x1.jpg" alt="Imagem de exemplo" width={640} height={800} title="Card Title" share="#" settings="#" bookmark="#">
-            <div className="text-sm my-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry..</div>
-            <Pricing oldprice="de R$199 por" price="99,90" method="no PIX" />
-            <Button cta="Ver mais" link="#" props="w-full bg-secondary-400 border-none text-primary-950" />
-          </Card>
-          <Card imgurl="/mockup-1x1.jpg" alt="Imagem de exemplo" width={640} height={800} title="Card Title" share="#" settings="#" bookmark="#">
-            <div className="text-sm my-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry..</div>
-            <Pricing oldprice="de R$199 por" price="99,90" method="no PIX" />
-            <Button cta="Ver mais" link="#" props="w-full bg-secondary-400 border-none text-primary-950" />
-          </Card>
-          <Card imgurl="/mockup-1x1.jpg" alt="Imagem de exemplo" width={640} height={800} title="Card Title" share="#" settings="#" bookmark="#">
-            <div className="text-sm my-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry..</div>
-            <Pricing price="99,90" method="no PIX" />
-            <Button cta="Ver mais" link="#" props="w-full bg-secondary-400 border-none text-primary-950" />
-          </Card>
-          <Card imgurl="/mockup-1x1.jpg" alt="Imagem de exemplo" width={640} height={800} title="Card Title" share="#" settings="#" bookmark="#">
-            <div className="text-sm my-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            </div>
-            <PricingLine/>
-          </Card>
+          <Card
+            imgurl="/mockup-1x1.jpg" alt="Imagem de exemplo" width={640} height={800}
+            title="Card Title" share="#" settings="#" bookmark="#"
+            desc="Here is the item short description with the most valuable info."
+            buttonUrl="https://globo.com"
+            oldprice="R$199"
+            price="R$99,90"
+            method="no PIX" />
+
+          <Card
+            imgurl="/mockup-1x1.jpg" alt="Imagem de exemplo" width={640} height={800}
+            title="Card Title" share="#" settings="#" bookmark="#"
+            desc="Here is the item short description with the most valuable info."
+            buttonUrl="https://globo.com"
+            oldprice="R$199"
+            price="R$99,90"
+            method="no PIX" />
+
+          <Card
+            imgurl="/mockup-1x1.jpg" alt="Imagem de exemplo" width={640} height={800}
+            title="Card Title" share="#" settings="#" bookmark="#"
+            desc="Here is the item short description with the most valuable info."
+            buttonUrl="https://globo.com"
+            oldprice="R$199"
+            price="R$99,90"
+            method="no PIX" />
+
+          <Card
+            imgurl="/mockup-1x1.jpg" alt="Imagem de exemplo" width={640} height={800}
+            title="Card Title" share="#" settings="#" bookmark="#"
+            desc="Here is the item short description with the most valuable info."
+            buttonUrl="https://globo.com"
+            oldprice="R$199"
+            price="R$99,90"
+            method="no PIX" />
 
         </Grid>
 
