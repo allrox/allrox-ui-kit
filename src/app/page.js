@@ -44,7 +44,7 @@ export default function Home() {
             <p className="mt-0 md:mb-8">Here you&apos;ll find some of my learning process results and - why not? - some mistakes.</p>
             <Button cta="Okay, show me!" link="#imageandtext" props="hidden md:block w-full sm:w-fit" arialabel="Começar a navegação" />
           </div>
-          <img className="lg:max-h-full lg:max-w-[600] mx-auto order-last lg:order-first" src="/allrox.webp" alt="Imagem ilustrativa" />
+          <img className="lg:max-h-full lg:max-w-[590] mx-auto order-last lg:order-first" src="/allrox.webp" alt="Imagem ilustrativa" />
         </div>
 
       </Hero>
