@@ -3,9 +3,9 @@ import { CiShare2 } from "react-icons/ci";
 import { CiSettings } from "react-icons/ci";
 import { CiBookmarkPlus } from "react-icons/ci";
 
-export default function Card({ children, imgurl, alt, width, height, title, share, settings, bookmark }) {
+export default function Card({ children, props, imgurl, alt, width, height, title, share, settings, bookmark }) {
     return (
-        <div className="flex flex-col bg-primary-900/[.45] p-4 rounded-lg text-base font-regular">
+        <div className={`flex flex-col bg-primary-900/[.45] p-4 rounded-lg text-base font-regular ${props}`}>
             <Image
                 src={imgurl}
                 alt={alt}

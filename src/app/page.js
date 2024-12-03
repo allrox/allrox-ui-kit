@@ -17,6 +17,7 @@ import Spacing from "./components/ui/Spacing";
 import PropertyTag from "./components/PropertyTag";
 import Pricing from "./components/Pricing";
 import Divider from "./components/ui/Divider";
+import PricingLine from "./components/PricingLine";
 
 export default function Home() {
 
@@ -120,24 +121,24 @@ export default function Home() {
 
         <Grid props="sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           <Card imgurl="/mockup-1x1.jpg" alt="Imagem de exemplo" width={640} height={800} title="Card Title" share="#" settings="#" bookmark="#">
-            <div className="text-sm my-4">LorLorem Ipsum is simply dummy text of the printing and typesetting industry..</div>
+            <div className="text-sm my-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry..</div>
             <Pricing oldprice="de R$199 por" price="99,90" method="no PIX" />
             <Button cta="Ver mais" link="#" props="w-full bg-secondary-400 border-none text-primary-950" />
           </Card>
           <Card imgurl="/mockup-1x1.jpg" alt="Imagem de exemplo" width={640} height={800} title="Card Title" share="#" settings="#" bookmark="#">
-            <div className="text-sm my-4">LorLorem Ipsum is simply dummy text of the printing and typesetting industry..</div>
+            <div className="text-sm my-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry..</div>
             <Pricing oldprice="de R$199 por" price="99,90" method="no PIX" />
             <Button cta="Ver mais" link="#" props="w-full bg-secondary-400 border-none text-primary-950" />
           </Card>
           <Card imgurl="/mockup-1x1.jpg" alt="Imagem de exemplo" width={640} height={800} title="Card Title" share="#" settings="#" bookmark="#">
-            <div className="text-sm my-4">LorLorem Ipsum is simply dummy text of the printing and typesetting industry..</div>
+            <div className="text-sm my-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry..</div>
             <Pricing price="99,90" method="no PIX" />
             <Button cta="Ver mais" link="#" props="w-full bg-secondary-400 border-none text-primary-950" />
           </Card>
           <Card imgurl="/mockup-1x1.jpg" alt="Imagem de exemplo" width={640} height={800} title="Card Title" share="#" settings="#" bookmark="#">
-            <div className="text-sm my-4">LorLorem Ipsum is simply dummy text of the printing and typesetting industry..</div>
-            <Pricing oldprice="de R$199 por" price="99,90" method="no PIX" />
-            <Button cta="Ver mais" link="#" props="w-full bg-secondary-400 border-none text-primary-950" />
+            <div className="text-sm my-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            </div>
+            <PricingLine/>
           </Card>
 
         </Grid>
