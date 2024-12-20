@@ -42,7 +42,7 @@ export default function Home() {
             <h1 className="mb-2 mt-2 sm:mt-0"><span className="font-thin lg:text-8xl">AllRox</span><br /><span className="md:text-7xl xl:text-8xl leading-none tracking-tighter">The UI Kit Project</span></h1>
             <h2 className="italic font-thin">A sketch-to-code journey</h2>
             <p className="mt-0 md:mb-8">Here you&apos;ll find some of my learning process results and - why not? - some mistakes.</p>
-            <Button cta="Okay, show me!" link="#imageandtext" props="hidden md:block w-full sm:w-fit" arialabel="Começar a navegação" />
+            <Button cta="Okay, show me!" buttonUrl="#imageandtext" props="hidden md:block w-full sm:w-fit" arialabel="Começar a navegação" />
           </div>
           <img className="lg:max-w-[600px] mx-auto order-last lg:order-first object-fit" src="/allrox.webp" alt="Imagem ilustrativa" />
         </div>
@@ -53,27 +53,28 @@ export default function Home() {
         <TextImage image="/mockup-1x1.jpg" width={640} height={640} alt="Imagem ilustrativa" order="order-first sm:order-last">
           <div>
             <h2>This is a text block + image sample section</h2>
-            <p>Here you can find some details of {`<TextImage />`} component usage. Elements order can be adjusted by properties.</p>
+            <p>Here you can find some details of {`<TextImage/>`} component usage. Elements order can be adjusted by its properties.</p>
             <h3>Component properties</h3>
-            <p className="mb-8">Properties are used inside the component tag, to control or adjust its appearance and behavior i.e. {`<TextImage`} <span className="property"> property</span>{` ="value" />`}</p>
-            <PropertyTag tag="image" text="sets image URL. Required." />
-            <PropertyTag tag="width" text="sets image width.  Required." />
-            <PropertyTag tag="height" text="sets image height.  Required." />
+            <p className="mb-8">Properties are used inside component tag, to control or adjust its appearance and behavior i.e. {`<TextImage`} <span className="property"> property</span>{` ="value"/>`}.</p>
+            <PropertyTag tag="image" text="*sets image URL." />
+            <PropertyTag tag="width" text="*sets image width." />
+            <PropertyTag tag="height" text="*sets image height." />
             <PropertyTag tag="alt" text="sets alternative text. Development best practice." />
-            <PropertyTag tag="order" text="sets image exhibition order. Default order is Text and Image." />
-            <p>Once you place your content between tags, the component will organize the columns automatically. Nested elements can be used, but it&apos;s a good idea to keep columns balance.</p>
+            <PropertyTag tag="order" text="sets image exhibition order with TailWind CSS. Default order is Text first." />
+            <p>*Required property</p>
+            <p>Once you place your content between tags, the component will organize the columns automatically. Nested elements can be used, but trying to keep columns balance is a good idea.</p>
           </div>
         </TextImage>
       </Section>
 
       <Section props="flex flex-col border border-dashed border-2 border-primary-500 justify-center text-center bg-primary-900">
         <h2>This is an empty {`<Section/>`}</h2>
-        <p>Here is a container built to keep content inside screen width limits.</p>
+        <p>Here is a container built to keep other components inside screen width limits.</p>
       </Section>
 
       <Section id="columns" >
         <h2 className="text-center">Text columns sample section</h2>
-        <p className="text-center">This section shows columns built with {`<Grid />`} component and Lorem Ipsum&apos;s sample text. By default, this component starts with a single column and you need to adjust columns using <span className="property">props</span> property and Tailwind&apos;s <span className="property">grid-cols</span>. Note that grid behavior is to adjust itself turning into lines on mobile devices.</p>
+        <p className="text-center">This section shows columns built with {`<Grid/>`} component and Lorem Ipsum&apos;s sample text. By default, this component starts with a single column and you need to adjust columns using <span className="property">props</span> property and Tailwind&apos;s <span className="property">grid-cols</span> as needed. Note that grid behavior is to adjust itself turning into rows on mobile devices.</p>
         <Spacing bottom={sm} />
         <Grid props="md:grid-cols-3 border border-2 border-primary-500 border-dashed px-8 pb-8">
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
@@ -87,7 +88,7 @@ export default function Home() {
       <Section props="bg-primary-800" id="cards">
         <h2 className="text-center">This is a demo of <span className="italic">grid section</span> and {`<Card/>`} component.</h2>
         <Spacing bottom={sm} />
-        <p>Mixing {`<Grid />`} and {`<Card />`} you can build sections to showcase your products with a featured image icon buttons, description, old, current prices and an action button. To build your cards, you need to provide properties below:</p>
+        <p>Mixing {`<Grid/>`} and {`<Card/>`} you can build sections to showcase your products with a featured image icon buttons, description, old, current prices and an action button. To build your cards, you need to provide properties below:</p>
         <div className="flex flex-col md:flex-row gap-16 my-10">
           <div className="max-w-[400px]">
             <Card imgurl="/mockup-1x1.jpg" alt="Imagem de exemplo" width={640} height={800}
@@ -107,7 +108,7 @@ export default function Home() {
             <PropertyTag tag="share" text="set share button link." />
             <PropertyTag tag="settings" text="set settings button link." />
             <PropertyTag tag="bookmark" text="set bookmark button link." />
-            <p>Inside card component, you can nest components like Pricing and Button, each one also owns specific properties as you will see next.</p>
+            <p>You can nest components like Pricing and Button onto your card, each one also owns specific properties as you will see next.</p>
             <h4 className="mt-6">{`<Pricing />`}</h4>
             <PropertyTag tag="oldprice" text="set oldprice text." />
             <PropertyTag tag="price" text="set price text." />
