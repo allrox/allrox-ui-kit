@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className='scroll-smooth' style={{scrollBehavior:'smooth'}}>
       <meta name="author" description="@AllRox" />
       <meta name="keywords" description="AllRox, UI, UX, UI Kit, React, Next JS, Tailwind CSS" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
