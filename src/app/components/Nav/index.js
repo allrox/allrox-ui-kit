@@ -41,7 +41,7 @@ export default function Nav({ children, logo, alt, width, height, cta, ctalink, 
                 <li>
                     {cta && (
                         <div className="mt-2 md:mt-0 md:ms-10">
-                            <Button cta={cta} link={ctalink}>
+                            <Button cta={cta} buttonUrl={ctalink}>
                                 <FaWhatsapp />
                             </Button>
                         </div>
