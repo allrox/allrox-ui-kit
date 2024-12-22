@@ -89,21 +89,22 @@ export default function Home() {
         <h2 className="text-center">This is a demo of <span className="italic">grid section</span> and {`<Card/>`} component.</h2>
         <Spacing bottom={sm} />
         <p>Mixing {`<Grid/>`} and {`<Card/>`} you can build sections to showcase your products with a featured image icon buttons, description, old, current prices and an action button. To build your cards, you need to provide properties below:</p>
-        <div className="flex flex-col md:flex-row gap-16 my-10">
+        <div className="flex flex-col lg:flex-row gap-16 my-10">
           <div className="max-w-[400px]">
             <Card imgurl="/mockup-1x1.jpg" alt="Imagem de exemplo" width={640} height={800}
               title="I&apos;m a sample card" share="#" settings="#" bookmark="#"
-              desc="Here is your item&apos;s short description."
+              desc="Here goes your item details or description."
               buttonUrl="https://globo.com"
-              oldprice="de R$199 por"
+              oldprice="R$199"
               price="R$99,00"
-              method="PIX" />
+              method="Pay with PIX" />
           </div>
           <div>
             <PropertyTag tag="imgurl" text="set the url to your card's featured image" />
             <PropertyTag tag="alt" text="set the alternative text to your featured image. It&apos;s a best development practice." />
             <PropertyTag tag="width" text="set image width. Required." />
             <PropertyTag tag="height" text="set image height. Required." />
+            <PropertyTag tag="tag" text="sets the highlight tag over card image." />
             <PropertyTag tag="title" text="set card title." />
             <PropertyTag tag="share" text="set share button link." />
             <PropertyTag tag="settings" text="set settings button link." />
@@ -122,42 +123,33 @@ export default function Home() {
 
         <Divider />
 
-        <Grid props="sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <Grid props="sm:grid-cols-2 md:grid-cols-3">
           <Card
             imgurl="/mockup-1x1.jpg" alt="Imagem de exemplo" width={640} height={800}
+            tag="Special Sale!"
             title="Card Title" share="#" settings="#" bookmark="#"
-            desc="Here is the item short description with the most valuable info."
+            desc="Here is the item description with the most valuable info. This specific card has a highlight tag and more text than the others to emphatize its content volume difference."
             buttonUrl="https://globo.com"
-            oldprice="R$199"
             price="R$99,90"
-            method="no PIX" />
+            method="Pay with PIX" />
 
           <Card
             imgurl="/mockup-1x1.jpg" alt="Imagem de exemplo" width={640} height={800}
             title="Card Title" share="#" settings="#" bookmark="#"
             desc="Here is the item short description with the most valuable info."
             buttonUrl="https://globo.com"
-            oldprice="R$199"
+            oldprice="R$299"
             price="R$99,90"
-            method="no PIX" />
+            method="Pay with PIX" />
 
           <Card
             imgurl="/mockup-1x1.jpg" alt="Imagem de exemplo" width={640} height={800}
             title="Card Title" share="#" settings="#" bookmark="#"
             desc="Here is the item short description with the most valuable info."
             buttonUrl="https://globo.com"
-            oldprice="R$199"
+            oldprice="R$299"
             price="R$99,90"
-            method="no PIX" />
-
-          <Card
-            imgurl="/mockup-1x1.jpg" alt="Imagem de exemplo" width={640} height={800}
-            title="Card Title" share="#" settings="#" bookmark="#"
-            desc="Here is the item short description with the most valuable info."
-            buttonUrl="https://globo.com"
-            oldprice="R$199"
-            price="R$99,90"
-            method="no PIX" />
+            method="Pay with PIX" />
 
         </Grid>
 
