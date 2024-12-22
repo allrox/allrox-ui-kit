@@ -1,11 +1,20 @@
 import Button from "../ui/Button"
 
-export default function PricingLine({ price, method, buttonUrl }) {
+export default function PricingLine({ price, method, buttonUrl, oldprice }) {
   return (
-    <div className="flex flex-row gap-2 border-t border-1 border-white/[0.05] justify-between items-center pt-4 h-full]">
-      <Button cta="Comprar" props="w-full bg-secondary-400 border-none text-primary-950 text-sm p-2" buttonUrl={buttonUrl}/>
-      <div className="font-medium">
-        <span className="text-base">{price}</span> {method}
+    <div className="flex flex-col gap-2 border-t border-1 border-white/[0.05] pt-6 h-full]">
+      {
+        oldprice &&
+        <span className="line-through text-base">
+          from {oldprice}
+        </span>
+      }
+
+      <div className="flex flex-row justify-between">
+        <Button cta={`Buy for ${price}`} buttonUrl={buttonUrl} />
+        <div className="text-base flex flex-row text-sm font-bold items-center gap-1">
+          {method}
+        </div>
       </div>
     </div>
   )
