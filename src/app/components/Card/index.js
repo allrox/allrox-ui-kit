@@ -9,7 +9,7 @@ export default function Card({ props, imgurl, alt, width, height, title, share, 
         <div className={`flex flex-col bg-white text-black rounded-xl text-base font-regular  ${props}`}>
 
             {tag && (
-                <div className="absolute text-xs font-medium mx-4 my-4 bg-primary-600 text-white px-[12] py-[3] rounded-2xl">{tag}</div>
+                <div className="absolute text-xs font-medium mx-4 my-4 bg-primary-600 text-white px-3 py-1 rounded-2xl">{tag}</div>
             )
             }
 
