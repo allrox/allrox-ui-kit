@@ -50,7 +50,7 @@ export default function Home() {
       </Hero>
 
       <Section props="bg-primary-800" id="imageandtext">
-        <TextImage image="/mockup-1x1.jpg" width={640} height={640} alt="Imagem ilustrativa" order="order-first sm:order-last">
+        <TextImage image="/mockup-1x1.webp" width={600} height={600} alt="Imagem ilustrativa" order="order-first lg:order-last " desc="Here goes your image description.">
           <div>
             <h2>This is a text block + image sample section</h2>
             <p>Here you can find some details of {`<TextImage/>`} component usage. Elements order can be adjusted by its properties.</p>
@@ -61,6 +61,7 @@ export default function Home() {
             <PropertyTag tag="height" text="*sets image height." />
             <PropertyTag tag="alt" text="sets alternative text. Development best practice." />
             <PropertyTag tag="order" text="sets image exhibition order with TailWind CSS. Default order is Text first." />
+            <PropertyTag tag="desc" text="show a description line below your image." />
             <p>*Required property</p>
             <p>Once you place your content between tags, the component will organize the columns automatically. Nested elements can be used, but trying to keep columns balance is a good idea.</p>
           </div>
@@ -91,13 +92,13 @@ export default function Home() {
         <p>Mixing {`<Grid/>`} and {`<Card/>`} you can build sections to showcase your products with a featured image icon buttons, description, old, current prices and an action button. To build your cards, you need to provide properties below:</p>
         <div className="flex flex-col lg:flex-row gap-16 my-10">
           <div className="max-w-[400px]">
-            <Card imgurl="/mockup-1x1.jpg" alt="Imagem de exemplo" width={640} height={800}
+            <Card imgurl="/mockup-1x1.webp" alt="Imagem de exemplo"
               title="I&apos;m a sample card" share="#" settings="#" bookmark="#"
               desc="Here goes your item details or description."
               buttonUrl="https://globo.com"
               oldprice="R$199"
               price="R$99,00"
-              method="Pay with PIX" />
+              method="Valid with PIX" />
           </div>
           <div>
             <PropertyTag tag="imgurl" text="set the url to your card's featured image" />
@@ -125,31 +126,32 @@ export default function Home() {
 
         <Grid props="sm:grid-cols-2 md:grid-cols-3">
           <Card
-            imgurl="/mockup-1x1.jpg" alt="Imagem de exemplo" width={640} height={800}
+            imgurl="/mockup-1x1.webp" alt="Imagem de exemplo"
             tag="Special Sale!"
             title="Card Title" share="#" settings="#" bookmark="#"
             desc="Here is the item description with the most valuable info. This specific card has a highlight tag and more text than the others to emphatize its content volume difference."
             buttonUrl="https://globo.com"
+            oldprice="R$199"
             price="R$99,90"
-            method="Pay with PIX" />
+            method="Valid with PIX" />
 
           <Card
-            imgurl="/mockup-1x1.jpg" alt="Imagem de exemplo" width={640} height={800}
+            imgurl="/mockup-1x1.webp" alt="Imagem de exemplo"
             title="Card Title" share="#" settings="#" bookmark="#"
             desc="Here is the item short description with the most valuable info."
             buttonUrl="https://globo.com"
             oldprice="R$299"
             price="R$99,90"
-            method="Pay with PIX" />
+            method="Valid with PIX" />
 
           <Card
-            imgurl="/mockup-1x1.jpg" alt="Imagem de exemplo" width={640} height={800}
+            imgurl="/mockup-1x1.webp" alt="Imagem de exemplo"
             title="Card Title" share="#" settings="#" bookmark="#"
             desc="Here is the item short description with the most valuable info."
             buttonUrl="https://globo.com"
             oldprice="R$299"
             price="R$99,90"
-            method="Pay with PIX" />
+            method="Valid with PIX" />
 
         </Grid>
 
