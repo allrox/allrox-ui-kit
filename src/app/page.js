@@ -13,11 +13,11 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
+import { RiDiscountPercentLine } from "react-icons/ri";
+import { CiCircleChevUp } from "react-icons/ci";
 import Spacing from "./components/ui/Spacing";
 import PropertyTag from "./components/PropertyTag";
-import Pricing from "./components/Pricing";
 import Divider from "./components/ui/Divider";
-import PricingLine from "./components/PricingLine";
 
 export default function Home() {
 
@@ -30,7 +30,7 @@ export default function Home() {
     <div>
       <Hero>
         <MenuBar>
-          <Nav logo="/allrox-logo.svg" alt="Logo" brandtext="" width={150} height={30} cta="Get in touch!" ctalink="https://wa.me/5521969104763?text=Ol%C3%A1%2C%20acessei%20*AllRox%3A%20The%20UI%20Kit%20Project*%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.">
+          <Nav logo="/allrox-logo.svg" alt="Logo" brandtext="" width={120} height={30} cta="Get in touch!" ctalink="https://wa.me/5521969104763?text=Ol%C3%A1%2C%20acessei%20*AllRox%3A%20The%20UI%20Kit%20Project*%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.">
             <MenuItem label="Text + Image" link="#imageandtext" />
             <MenuItem label="Columns" link="#columns" />
             <MenuItem label="Cards" link="#cards" />
@@ -55,10 +55,11 @@ export default function Home() {
             <h2>This is a text block + image sample section</h2>
             <p>Here you can find some details of {`<TextImage/>`} component usage. Elements order can be adjusted by its properties.</p>
             <h3>Component properties</h3>
-            <p className="mb-8">Properties are used inside component tag, to control or adjust its appearance and behavior i.e. {`<TextImage`} <span className="property"> property</span>{` ="value"/>`}.</p>
+            <p className="mb-8">Properties are used inside component tag, to control or adjust its appearance and behavior e.g. {`<TextImage`} <span className="property"> property</span>{` ="value"/>`}.</p>
             <PropertyTag tag="image" text="*sets image URL." />
             <PropertyTag tag="width" text="*sets image width." />
             <PropertyTag tag="height" text="*sets image height." />
+            <PropertyTag tag="maxwidth" text="sets image max-width." />
             <PropertyTag tag="alt" text="sets alternative text. Development best practice." />
             <PropertyTag tag="order" text="sets image exhibition order with TailWind CSS. Default order is Text first." />
             <PropertyTag tag="desc" text="show a description line below your image." />
@@ -94,20 +95,21 @@ export default function Home() {
           <div className="mx-auto">
             <Card imgurl="/mockup-1x1.webp" alt="Imagem de exemplo"
               title="I&apos;m a sample card" share="#" settings="#" bookmark="#"
-              props="max-w-[450px] min-w-[320px]"
+              props="max-w-[450px]"
               desc="Here goes your item details or description."
               buttonUrl="https://globo.com"
               oldprice="R$199"
               price="R$99,00"
-              method="Valid with PIX" />
+              method="Save R$100" />
           </div>
-          <div className="max-w-[750px]">
+          <div className="max-w-[700px]">
             <PropertyTag tag="imgurl" text="set the url to your card's featured image" />
             <PropertyTag tag="alt" text="set the alternative text to your featured image. It&apos;s a best development practice." />
             <PropertyTag tag="width" text="set image width. Required." />
             <PropertyTag tag="height" text="set image height. Required." />
             <PropertyTag tag="tag" text="sets the highlight tag over card image." />
             <PropertyTag tag="title" text="set card title." />
+            <PropertyTag tag="desc" text="set product's description." />
             <PropertyTag tag="share" text="set share button link." />
             <PropertyTag tag="settings" text="set settings button link." />
             <PropertyTag tag="bookmark" text="set bookmark button link." />
@@ -116,6 +118,7 @@ export default function Home() {
             <PropertyTag tag="oldprice" text="set oldprice text." />
             <PropertyTag tag="price" text="set price text." />
             <PropertyTag tag="method" text="set payment method text." />
+            <PropertyTag tag="offerTag" text="set offer tag text." />
             <h4 className="mt-6">{`<Button />`}</h4>
             <PropertyTag tag="cta" text="Your call to action text." />
             <PropertyTag tag="link" text="Your button URL." />
@@ -125,16 +128,18 @@ export default function Home() {
 
         <Divider />
 
-        <Grid props="sm:grid-cols-2 md:grid-cols-3">
+        <Grid props="sm:grid-cols-2 md:grid-cols-3 flex-wrap">
           <Card
             imgurl="/mockup-1x1.webp" alt="Imagem de exemplo"
             tag="Special Sale!"
             title="Card Title" share="#" settings="#" bookmark="#"
             desc="Here is the item description with the most valuable info. This specific card has a highlight tag and more text than the others to emphatize its content volume difference."
             buttonUrl="https://globo.com"
-            oldprice="R$199"
-            price="R$99,90"
-            method="Valid with PIX" />
+            // oldprice="R$199"
+            price="R$99"
+            offerTag="Free shipping"
+          />
+
 
           <Card
             imgurl="/mockup-1x1.webp" alt="Imagem de exemplo"
@@ -142,17 +147,19 @@ export default function Home() {
             desc="Here is the item short description with the most valuable info."
             buttonUrl="https://globo.com"
             oldprice="R$299"
-            price="R$99,90"
-            method="Valid with PIX" />
+            price="R$99"
+            offerTag="Save R$200"
+          />
 
           <Card
             imgurl="/mockup-1x1.webp" alt="Imagem de exemplo"
             title="Card Title" share="#" settings="#" bookmark="#"
             desc="Here is the item short description with the most valuable info."
             buttonUrl="https://globo.com"
-            oldprice="R$299"
-            price="R$99,90"
-            method="Valid with PIX" />
+            oldprice="R$149"
+            price="R$99"
+            // offerTag="Save R$200"
+          />
 
         </Grid>
 
@@ -161,6 +168,14 @@ export default function Home() {
       <Section>
         <div className="flex flex-col items-center justify-between gap-10">
           <div className="flex flex-col items-center">
+            <div className="pb-12">
+              <a href="#">
+                <div className="flex flex-row gap-3 items-center">
+                  <span className="text-sm">Back to Top</span>
+                  <CiCircleChevUp className="text-2xl animate-ping" />
+                </div>
+              </a>
+            </div>
             <Image src="/allrox-logo.svg" alt="Logo AllRox" width={150} height={80} className="mb-4" />
             <p>The UI Kit Project</p>
             <div className="flex flex-row gap-4 text-3xl mt-4">
@@ -178,33 +193,6 @@ export default function Home() {
               </a>
             </div>
           </div>
-          {/* <div className="flex flex-col items-center sm:items-start">
-            <h4 className="text-lg font-bold">Footer Title</h4>
-            <ul>
-              <li>MenuItem</li>
-              <li>MenuItem</li>
-              <li>MenuItem</li>
-              <li>MenuItem</li>
-            </ul>
-          </div>
-          <div className="flex flex-col items-center sm:items-start">
-            <h4 className="text-lg font-bold">Footer Title</h4>
-            <ul>
-              <li>MenuItem</li>
-              <li>MenuItem</li>
-              <li>MenuItem</li>
-              <li>MenuItem</li>
-            </ul>
-          </div>
-          <div className="flex flex-col items-center sm:items-start">
-            <h4 className="text-lg font-bold">Footer Title</h4>
-            <ul>
-              <li>MenuItem</li>
-              <li>MenuItem</li>
-              <li>MenuItem</li>
-              <li>MenuItem</li>
-            </ul>
-          </div> */}
         </div>
       </Section>
     </div>
