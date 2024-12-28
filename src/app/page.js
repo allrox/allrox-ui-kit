@@ -50,7 +50,7 @@ export default function Home() {
       </Hero>
 
       <Section props="bg-primary-800" id="imageandtext">
-        <TextImage image="/mockup-1x1.webp" width={600} height={600} alt="Imagem ilustrativa" order="order-first lg:order-last " desc="Here goes your image description.">
+        <TextImage image="/mockup-1x1.webp" width={600} height={600} alt="Imagem ilustrativa" order="order-first lg:order-last " desc="Here goes your image description." maxwidth="max-w-[600px]">
           <div>
             <h2>This is a text block + image sample section</h2>
             <p>Here you can find some details of {`<TextImage/>`} component usage. Elements order can be adjusted by its properties.</p>
@@ -90,17 +90,18 @@ export default function Home() {
         <h2 className="text-center">This is a demo of <span className="italic">grid section</span> and {`<Card/>`} component.</h2>
         <Spacing bottom={sm} />
         <p>Mixing {`<Grid/>`} and {`<Card/>`} you can build sections to showcase your products with a featured image icon buttons, description, old, current prices and an action button. To build your cards, you need to provide properties below:</p>
-        <div className="flex flex-col lg:flex-row gap-16 my-10">
-          <div className="max-w-[400px]">
+        <Grid props="grid grid-flow-row xl:grid-flow-col my-10">
+          <div className="mx-auto">
             <Card imgurl="/mockup-1x1.webp" alt="Imagem de exemplo"
               title="I&apos;m a sample card" share="#" settings="#" bookmark="#"
+              props="max-w-[450px] min-w-[320px]"
               desc="Here goes your item details or description."
               buttonUrl="https://globo.com"
               oldprice="R$199"
               price="R$99,00"
               method="Valid with PIX" />
           </div>
-          <div>
+          <div className="max-w-[750px]">
             <PropertyTag tag="imgurl" text="set the url to your card's featured image" />
             <PropertyTag tag="alt" text="set the alternative text to your featured image. It&apos;s a best development practice." />
             <PropertyTag tag="width" text="set image width. Required." />
@@ -120,7 +121,7 @@ export default function Home() {
             <PropertyTag tag="link" text="Your button URL." />
             <PropertyTag tag="props" text="Any className valid property." />
           </div>
-        </div>
+        </Grid>
 
         <Divider />
 
