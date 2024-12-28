@@ -1,10 +1,10 @@
 import Image from "next/image"
+import PricingLine from "../PricingLine";
 import { CiShare2 } from "react-icons/ci";
 import { CiSettings } from "react-icons/ci";
 import { CiBookmarkPlus } from "react-icons/ci";
-import PricingLine from "../PricingLine";
 
-export default function Card({ props, imgurl, alt, title, share, settings, bookmark, desc, oldprice, price, method, buttonUrl, tag }) {
+export default function Card({ props, imgurl, alt, title, share, settings, bookmark, desc, oldprice, price, offerTag, buttonUrl, tag }) {
     return (
         <div className={`flex flex-col bg-white text-black rounded-xl text-base font-regular lg:hover:scale-[1.02] hover:shadow-[0_0_40px_5px_rgba(0,0,0,.1)] transition-transform ${props} `}>
 
@@ -30,11 +30,11 @@ export default function Card({ props, imgurl, alt, title, share, settings, bookm
                         {settings && <a href={share}><CiSettings /></a>}
                         {bookmark && <a href={share}><CiBookmarkPlus /></a>}
                     </div>
-                    <div className="flex flex-col h-full justify-around flex-1">
+                    <div className="flex flex-col flex-1">
                         <div className="py-3 flex-1 text-sm">
                             {desc}
                         </div>
-                        <PricingLine oldprice={oldprice} price={price} method={method} buttonUrl={buttonUrl} />
+                        <PricingLine oldprice={oldprice} price={price} offerTag={offerTag} buttonUrl={buttonUrl} />
                     </div>
                 </div>
             </div>
