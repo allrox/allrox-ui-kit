@@ -1,5 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export const metadata = {
   title: "AllRox: The UI Kit Project",
@@ -13,6 +15,8 @@ export default function RootLayout({ children }) {
       <meta name="keywords" description="AllRox, UI, UX, UI Kit, React, Next JS, Tailwind CSS" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <body>
+        <Analytics />
+        <SpeedInsights />
         {children}
       </body>
     </html>
