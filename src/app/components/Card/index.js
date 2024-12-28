@@ -4,9 +4,9 @@ import { CiSettings } from "react-icons/ci";
 import { CiBookmarkPlus } from "react-icons/ci";
 import PricingLine from "../PricingLine";
 
-export default function Card({ props, imgurl, alt, width, height, title, share, settings, bookmark, desc, oldprice, price, method, buttonUrl, tag }) {
+export default function Card({ props, imgurl, alt, title, share, settings, bookmark, desc, oldprice, price, method, buttonUrl, tag }) {
     return (
-        <div className={`flex flex-col bg-white text-black rounded-xl text-base font-regular  ${props}`}>
+        <div className={`flex flex-col bg-white text-black rounded-xl text-base font-regular lg:hover:scale-[1.02] hover:shadow-[0_0_40px_5px_rgba(0,0,0,.1)] transition-transform ${props} `}>
 
             {tag && (
                 <div className="absolute text-xs font-medium mx-4 my-4 bg-primary-600 text-white px-3 py-1 rounded-2xl">{tag}</div>
@@ -16,8 +16,8 @@ export default function Card({ props, imgurl, alt, width, height, title, share, 
             <Image
                 src={imgurl}
                 alt={alt}
-                width={width}
-                height={height}
+                width={650}
+                height={650}
                 className="rounded-t-xl" />
 
             <div className="p-6 flex flex-col flex-1">
