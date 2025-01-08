@@ -89,10 +89,9 @@ export default function Home() {
 
       <Section props="bg-primary-800" id="cards">
         <h2 className="text-center">This is a demo of <span className="italic">grid section</span> and {`<Card/>`} component.</h2>
-        <Spacing bottom={sm} />
         <p>Mixing {`<Grid/>`} and {`<Card/>`} you can build sections to showcase your products with a featured image icon buttons, description, old, current prices and an action button. To build your cards, you need to provide properties below:</p>
         <Grid props="grid grid-flow-row xl:grid-flow-col my-10">
-          <div className="mx-auto">
+          <div className="justify-self-start md:justify-self-center xl:justify-self-start">
             <Card imgurl="/mockup-1x1.webp" alt="Imagem de exemplo"
               title="I&apos;m a sample card" share="#" settings="#" bookmark="#"
               props="max-w-[450px]"
